@@ -20,6 +20,8 @@ li[data-audio].active{
 font-weight:bold;
 }
 
+form.paypal-button {padding:10px;}
+
     </style>
 </head>
 
@@ -29,7 +31,7 @@ font-weight:bold;
     <img src="/rehberge-records-logo.png" alt="reberge records logo" title="rehberge records" />
 
 <p> 
-    a diy cassette label in berlin wedding<br/>
+    <strong>a diy cassette label in berlin wedding</strong><br/>
     run by rocky lorelei and sean armstrong<br/>
 </p>
 </header>
@@ -55,6 +57,8 @@ font-weight:bold;
     <img src="records/rr01/The Technical Times - Cover (cover).jpg" alt="Sean Armstrong - The Technical Times album cover art" />
 </figure>
 
+
+
 <ol>
 
 <li data-audio="/records/rr01/01 Perspektivaluna.mp3" class="active">Perspektivaluna</li>
@@ -75,6 +79,11 @@ font-weight:bold;
     <source src="/records/rr01/01 Perspektivaluna.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
   </audio> 
+
+  <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button">
+    <em>&#163;10 for cassette postage and download code: </em>
+    <input name="business" type="hidden" value="r.loren.taylor@gmail.com"><input name="cmd" type="hidden" value="_xclick"><input name="item_name" type="hidden" value="RR01: sean armstrong - the technical times"><input name="amount" type="hidden" value="10"><input name="currency_code" type="hidden" value="GBP"><input name="return" type="hidden" value="https://rehberge.com"><input type="image" name="submit" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0"> 
+</form>
 
 </section>
 
