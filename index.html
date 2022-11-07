@@ -11,6 +11,15 @@ img {
 section {
     padding:10px;
 }
+
+li[data-audio]{
+cursor:pointer;
+}
+
+li[data-audio].active{
+font-weight:bold;
+}
+
     </style>
 </head>
 
@@ -20,7 +29,7 @@ section {
     <img src="/rehberge-records-logo.png" alt="reberge records logo" title="rehberge records" />
 
 <p> 
-    a diy cassette label in north berlin<br/>
+    a diy cassette label in berlin wedding<br/>
     run by rocky lorelei and sean armstrong<br/>
 </p>
 </header>
@@ -48,26 +57,26 @@ section {
 
 <ol>
 
-<li>Perspektivaluna</li>
-<li>Seven</li>
-<li>Playing It Cool</li>
-<li>Red Cathedral</li>
-<li>Island Song</li>
-<li>Rambling Echo, Spring Softly</li>
-<li>Lots of Love</li>
-<li>A Clearing</li>
-<li>Impossible Ink</li>
-<li>Realise The Beautiful Clear Prism That You Are</li>
-<li>Anyway</li>
+<li data-audio="/records/rr01/01 Perspektivaluna.mp3" class="active">Perspektivaluna</li>
+<li data-audio="/records/rr01/02 Seven.mp3">Seven</li>
+<li data-audio="/records/rr01/03 Playing It Cool.mp3">Playing It Cool</li>
+<li data-audio="/records/rr01/04 Red Cathedral.mp3">Red Cathedral</li>
+<li data-audio="/records/rr01/05 Island Song.mp3">Island Song</li>
+<li data-audio="/records/rr01/06 Rambling Echo, Spring Softly.mp3">Rambling Echo, Spring Softly</li>
+<li data-audio="/records/rr01/07 Lots of Love.mp3">Lots of Love</li>
+<li data-audio="/records/rr01/08 A Clearing.mp3">A Clearing</li>
+<li data-audio="/records/rr01/09 Impossible Ink.mp3">Impossible Ink</li>
+<li data-audio="/records/rr01/10 Realise The Beautiful Clear Prism That You Are.mp3">Realise The Beautiful Clear Prism That You Are</li>
+<li data-audio="/records/rr01/11 Anyway.mp3">Anyway</li>
 
 </ol>
 
-<audio controls>
+<audio controls id="audio-player">
     <source src="/records/rr01/01 Perspektivaluna.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
   </audio> 
 
-    </section>
+</section>
 
 
 </main>
@@ -75,11 +84,49 @@ section {
 
 <footer>
 <p>
-you can contact us at <a href='mailto://rehbergerecords@hotmail.com'>rehbergerecords@hotmail.com</a><br/>
-instagram = <a href='https://www.instagram.com/rehberge_records/'>@rehberge_records</a>
+you can contact us at <a href='mailto://rehbergerecords@hotmail.com' target="_blank">rehbergerecords@hotmail.com</a><br/>
+instagram = <a href='https://www.instagram.com/rehberge_records/' target="_blank">@rehberge_records</a><br/>
+bandcamp = <a href='https://rehbergerecords.bandcamp.com' target="_blank">rehbergerecords</a>
 </p>
 
 </footer>
+
+<script>
+
+const audioFiles = [].slice.call(document.querySelectorAll("li[data-audio]"));
+const audioPlayer = document.getElementById('audio-player');
+
+const playTrack = (trackLi)=>{
+    audioFiles.forEach(y=>{y.className = ''});
+    trackLi.className = 'active';
+    audioPlayer.src = trackLi.dataset.audio;
+    audioPlayer.play();
+}
+
+audioFiles.forEach(x=>{
+    x.onclick = () => {
+        playTrack(x);
+    }
+})
+
+audioPlayer.onended = ()=>{
+    let currentTrackIndex = audioFiles.reduce((accum,x,i)=>{
+        if(x.className=='active'){
+            accum = i;
+        }
+        return accum;
+    }, 0);
+
+    if(currentTrackIndex < audioFiles.length-1){
+        let nextTrackIndex = currentTrackIndex+1;
+        let nextTrack = audioFiles[nextTrackIndex];
+        playTrack(audioFiles[nextTrackIndex]);
+    }
+}
+
+
+</script>
+
 
 </body>
 
