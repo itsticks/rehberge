@@ -12,6 +12,14 @@ section {
     padding:10px;
 }
 
+main section {display:flex; flex-wrap: wrap;}
+
+main section > * {
+    width:600px;
+    max-width:100%;
+}
+
+
 li[data-audio]{
 cursor:pointer;
 }
@@ -20,7 +28,9 @@ li[data-audio].active{
 font-weight:bold;
 }
 
-form.paypal-button {padding:10px;}
+form.paypal-button {
+    padding:10px;
+}
 
     </style>
 </head>
@@ -31,16 +41,33 @@ form.paypal-button {padding:10px;}
     <img src="/rehberge-records-logo.png" alt="reberge records logo" title="rehberge records" />
 
 <p> 
-    <strong>a diy cassette label in berlin wedding</strong><br/>
-    run by rocky lorelei and sean armstrong<br/>
+    <strong>a diy cassette label in berlin wedding</strong>
+    curated by rocky lorelei and sean armstrong<br/>
 </p>
 </header>
 
 <main>
 
     <section>
+<div>
         <h2>RR01: Sean Armstrong - The Technical Times</h2>
-
+        <ol>
+            <li data-audio="/records/rr01/01 Perspektivaluna.mp3" class="active">Perspektivaluna</li>
+            <li data-audio="/records/rr01/02 Seven.mp3">Seven</li>
+            <li data-audio="/records/rr01/03 Playing It Cool.mp3">Playing It Cool</li>
+            <li data-audio="/records/rr01/04 Red Cathedral.mp3">Red Cathedral</li>
+            <li data-audio="/records/rr01/05 Island Song.mp3">Island Song</li>
+            <li data-audio="/records/rr01/06 Rambling Echo, Spring Softly.mp3">Rambling Echo, Spring Softly</li>
+            <li data-audio="/records/rr01/07 Lots of Love.mp3">Lots of Love</li>
+            <li data-audio="/records/rr01/08 A Clearing.mp3">A Clearing</li>
+            <li data-audio="/records/rr01/09 Impossible Ink.mp3">Impossible Ink</li>
+            <li data-audio="/records/rr01/10 Realise The Beautiful Clear Prism That You Are.mp3">Realise The Beautiful Clear Prism That You Are</li>
+            <li data-audio="/records/rr01/11 Anyway.mp3">Anyway</li>
+            </ol>
+            <audio controls id="audio-player">
+                <source src="/records/rr01/01 Perspektivaluna.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio> 
 <p>
     a new solo album by sean armstrong.<br/>
     recorded at home in wedding, berlin as people, sounds and seasons passed by outside.<br/>
@@ -52,44 +79,26 @@ form.paypal-button {padding:10px;}
     available to buy on cassette (first edition of 25)<br/>
 </p>
 
+
+      <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button">
+        <em>&#x20AC;15 for cassette postage and download code: </em>
+        <input name="business" type="hidden" value="r.loren.taylor@gmail.com"><input name="cmd" type="hidden" value="_xclick"><input name="item_name" type="hidden" value="RR01: sean armstrong - the technical times"><input name="amount" type="hidden" value="15"><input name="currency_code" type="hidden" value="EUR"><input name="return" type="hidden" value="https://rehberge.com"><input type="image" name="submit" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0"> 
+    </form>
+</div>
+
 <figure>
     <caption><p>cover art by sean armstrong</p></caption>
     <img src="records/rr01/The Technical Times - Cover (cover).jpg" alt="Sean Armstrong - The Technical Times album cover art" />
+    <img src="records/rr01/The Technical Times - Cover.jpeg" alt="Sean Armstrong - The Technical Times album tape cover" />
 </figure>
 
 
 
-<ol>
-
-<li data-audio="/records/rr01/01 Perspektivaluna.mp3" class="active">Perspektivaluna</li>
-<li data-audio="/records/rr01/02 Seven.mp3">Seven</li>
-<li data-audio="/records/rr01/03 Playing It Cool.mp3">Playing It Cool</li>
-<li data-audio="/records/rr01/04 Red Cathedral.mp3">Red Cathedral</li>
-<li data-audio="/records/rr01/05 Island Song.mp3">Island Song</li>
-<li data-audio="/records/rr01/06 Rambling Echo, Spring Softly.mp3">Rambling Echo, Spring Softly</li>
-<li data-audio="/records/rr01/07 Lots of Love.mp3">Lots of Love</li>
-<li data-audio="/records/rr01/08 A Clearing.mp3">A Clearing</li>
-<li data-audio="/records/rr01/09 Impossible Ink.mp3">Impossible Ink</li>
-<li data-audio="/records/rr01/10 Realise The Beautiful Clear Prism That You Are.mp3">Realise The Beautiful Clear Prism That You Are</li>
-<li data-audio="/records/rr01/11 Anyway.mp3">Anyway</li>
-
-</ol>
-
-<audio controls id="audio-player">
-    <source src="/records/rr01/01 Perspektivaluna.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-  </audio> 
-
-  <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button">
-    <em>&#163;10 for cassette postage and download code: </em>
-    <input name="business" type="hidden" value="r.loren.taylor@gmail.com"><input name="cmd" type="hidden" value="_xclick"><input name="item_name" type="hidden" value="RR01: sean armstrong - the technical times"><input name="amount" type="hidden" value="10"><input name="currency_code" type="hidden" value="GBP"><input name="return" type="hidden" value="https://rehberge.com"><input type="image" name="submit" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0"> 
-</form>
+<p><strong>Sean Armstrong</strong> - a songwriter and home recordist from Scotland living in Berlin. He was raised in remote corners of the Scottish highlands and islands, where he would walk beside the iron grey sea. As a young grown up, he moved to Glasgow to study human beings. It was there that music found him, saved him, and simultaneously destroyed his life. Sean's music is handmade, all over the place, and to the point.He enjoys singing about love, harmony and nature, and attempts to channel the special sense of timelessness that he finds in his favourite music, which is mostly of the past.</p>
 
 </section>
 
-
 </main>
-
 
 <footer>
 <p>
@@ -133,12 +142,6 @@ audioPlayer.onended = ()=>{
     }
 }
 
-
 </script>
-
-
 </body>
-
-
-
 </html>
