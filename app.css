@@ -1,0 +1,70 @@
+body{    
+    padding-left: 6px;
+    border-left: 0px solid #da7962;
+    background-color: azure;
+}
+
+.top-border{height:10px; width:100%;position:fixed;top:0px;left:0px}
+
+.maths-paper-background-horizontal{
+    background-image: url('/images/maths-paper-square.png');
+    background-position: left top;
+    background-attachment: fixed;
+    background-repeat:repeat-x;
+    background-size: 10px 10px;
+}
+
+.maths-paper-background-vertical{
+    background-image: url('/images/maths-paper-square.png');
+    background-position: left top;
+    background-attachment: fixed;
+    background-repeat:repeat-y;
+    background-size: 10px 10px;
+}
+
+.maths-paper-logo-background{
+    position: absolute;
+top: 25px;
+width: 92vw;
+height: 114px;
+background-image: url('/images/maths-paper-square.png');
+background-position: left top;
+background-repeat: repeat;
+background-size: 10px 10px;
+background-attachment: fixed;
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    width:500px;
+    max-width:100%;
+}
+
+section {
+    padding:10px;
+}
+
+main section {display:flex; flex-wrap: wrap;}
+
+h2{color: #eac6b4;}
+
+main section > * {
+    max-width: 500px;
+    width:100%;
+}
+
+
+li[data-audio]{
+cursor:pointer;
+}
+
+li[data-audio].active{
+font-weight:bold;
+}
+
+form.paypal-button {
+    padding:10px;
+}
+
+audio {width:100%;}

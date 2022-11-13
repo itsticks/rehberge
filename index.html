@@ -2,52 +2,14 @@
 <head>
     <title>Rehberge Records</title>
 
-    <style>
-        
-body{
-    border-left: 2px solid #da7962;
-    padding-left: 6px;
-}
-
-img {
-    width:500px;
-    max-width:100%;
-}
-
-section {
-    padding:10px;
-}
-
-main section {display:flex; flex-wrap: wrap;}
-
-main section > * {
-    max-width: 500px;
-    width:100%;
-}
-
-
-li[data-audio]{
-cursor:pointer;
-}
-
-li[data-audio].active{
-font-weight:bold;
-}
-
-form.paypal-button {
-    padding:10px;
-}
-
-audio {width:100%;}
-
-    </style>
+<link rel="stylesheet" href="/app.css" />
 </head>
 
-<body>
-
-<header>
-    <img src="/rehberge-records-logo.png" alt="reberge records logo" title="rehberge records" />
-
+<body class="maths-paper-background-vertical">
+<div class="maths-paper-background-horizontal top-border"></div>
+<header class="maths-paper-background-repeat">
+    <img src="/images/rehberge-logo-plain.png" alt="reberge records logo" title="rehberge records" />
+    <div class="maths-paper-logo-background"></div>
 <p> 
     <strong>a diy cassette label in berlin wedding</strong>
     curated by rocky lorelei and sean armstrong<br/>
@@ -88,8 +50,8 @@ audio {width:100%;}
 </p>
 
 
-      <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button">
-        <em>&#x20AC;15 for cassette postage and download code: </em>
+      <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button" target="_blank">
+        <strong>&#x20AC;15 for cassette postage and download code: </strong><br/>
         <input name="business" type="hidden" value="r.loren.taylor@gmail.com"><input name="cmd" type="hidden" value="_xclick"><input name="item_name" type="hidden" value="RR01: sean armstrong - the technical times"><input name="amount" type="hidden" value="15"><input name="currency_code" type="hidden" value="EUR"><input name="return" type="hidden" value="https://rehberge.com"><input type="image" name="submit" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0"> 
     </form>
 </div>
@@ -101,20 +63,21 @@ audio {width:100%;}
 </figure>
 
 
-
+<div>
 <p><strong>Sean Armstrong</strong> - a songwriter and home recordist from Scotland living in Berlin. 
     He was raised in remote corners of the Scottish highlands and islands, where he would walk beside the iron grey sea. 
     As a young grown up, he moved to Glasgow to study human beings. 
     It was there that music found him, saved him, and simultaneously destroyed his life. 
-    Sean's music is handmade, all over the place, and to the point. 
-    He enjoys singing about love, harmony and nature, and attempts to channel the special sense of timelessness that he finds in his favourite music, which is mostly of the past.
+    Sean's music is handmade, all over the place, and to the point.</p>
+    <p>He enjoys singing about love, harmony and nature, and attempts to channel the special sense of timelessness that he finds in his favourite music, which is mostly of the past.
 </p>
+</div>
 
 </section>
 
 </main>
 
-<footer>
+<footer class="maths-paper-background">
 <p>
 you can contact us at <a href='mailto://rehbergerecords@hotmail.com' target="_blank">rehbergerecords@hotmail.com</a><br/>
 instagram = <a href='https://www.instagram.com/rehberge_records/' target="_blank">@rehberge_records</a><br/>
