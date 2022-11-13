@@ -2,6 +2,7 @@ body{
     padding-left: 6px;
     border-left: 0px solid #da7962;
     background-color: whitesmoke;
+    font-family:sans-serif;
 }
 
 .top-border{height:10px; width:100%;position:fixed;top:0px;left:0px}
