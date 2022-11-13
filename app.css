@@ -47,7 +47,7 @@ section {
 
 main section {display:flex; flex-wrap: wrap;}
 
-h2{color: #eac6b4;}
+h2 {color: #eac6b4;}
 
 main section > * {
     max-width: 500px;
