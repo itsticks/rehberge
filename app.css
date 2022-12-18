@@ -1,5 +1,5 @@
 body {
-    padding-left: 6px;
+    /*! padding-left: 6px; */
     border-left: 0px solid #da7962;
     background-color: white;
     font-family: serif;
@@ -12,6 +12,8 @@ body {
     top: 0px;
     left: 0px
 }
+
+.bg{z-index:-999}
 
 .maths-paper-background-horizontal {
     background-image: url('/images/maths-paper-square.png');
@@ -27,26 +29,34 @@ body {
     background-attachment: fixed;
     background-repeat: repeat-y;
     background-size: 10px 10px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 .maths-paper-logo-background {
-    position: absolute;
-    top: 25px;
-    width: 92vw;
-    height: 114px;
     background-image: url('/images/maths-paper-square.png');
-    background-position: left top;
-    background-repeat: repeat;
     background-size: 10px 10px;
+    width:fit-content;
+    max-width: 500px;
+    position: fixed;
+    top:20px;
+    left:20px;
     background-attachment: fixed;
-    margin: 0px;
-    padding: 0px;
 }
 
 img {
     width: 500px;
     max-width: 100%;
 }
+
+header p {
+    margin-left:15px;
+}
+
+header img{filter: drop-shadow(1px 1px 1px #000);}
 
 section {
     padding: 10px;
@@ -82,4 +92,10 @@ audio {
 
 audio, audio::-webkit-media-controls-panel {
     background-color: #da7962;
+}
+
+#logo-container {
+    width: 481px;
+    max-width: 100%;
+    height:118px;
 }
