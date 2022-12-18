@@ -11,7 +11,7 @@
     <meta property="og:image:alt" content="rehberge records signature mathematics paper"/>
     <title>Rehberge Records</title>
     <meta name="theme-color" content="#da7962">
-    <link rel="stylesheet" href="/app.css?v=06" />
+    <link rel="stylesheet" href="/app.css?v=001" />
 </head>
 
 <body>
@@ -197,7 +197,14 @@ audioPlayer.onended = ()=>{
 }
 
 window.onscroll = ()=>{
-[].slice.call(document.getElementsByClassName('bg')).forEach(bg=>bg.style.filter = `hue-rotate(${(window.scrollY)*0.1}deg)`)
+[].slice.call(document.getElementsByClassName('bg'))
+.forEach(bg=>{
+    bg.style.filter = `hue-rotate(${(window.scrollY)*0.1}deg)`;
+    if(bg.id=='logo-container'){
+    bg.style.opacity = 1.25 - window.scrollY / window.scrollMaxY;
+    bg.style.transform = `skew(-${window.scrollY*0.01}deg,-${window.scrollY*0.01}deg)`
+    }
+})
 }
 
 window.onload = () => playTrack(audioFiles[0]);
