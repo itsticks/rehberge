@@ -11,7 +11,7 @@
     <meta property="og:image:alt" content="rehberge records signature mathematics paper"/>
     <title>Rehberge Records</title>
     <meta name="theme-color" content="#da7962">
-    <link rel="stylesheet" href="/app.css?v=003" />
+    <link rel="stylesheet" href="/app.css?v=005" />
 </head>
 
 <body>
@@ -21,7 +21,7 @@
     <div id="logo-container" class="maths-paper-logo-background bg"></div>
     <img src="/images/rehberge-logo-plain.png" alt="reberge records logo" title="rehberge records" />
 <p>rehberge records 
-    <strong>diy cassette label in berlin wedding</strong>
+    <strong>diy cassette label in berlin wedding</strong><br/>
     curated by rocky lorelei and sean armstrong<br/>
 </p>
 <audio controls id="audio-player">
@@ -185,7 +185,7 @@ document.getElementById('basket-label').innerHTML = newNameValue;
 document.getElementById('basket-total').innerHTML = "&nbsp; (&#x20AC;" + newAmountValue + ")";
 basketName.value = newNameValue;
 basketAmount.value = newAmountValue; 
-document.body.style.paddingBottom = document.getElementById('basket-container').offsetHeight + 'px';
+document.body.style.paddingBottom = parseInt(document.getElementById('basket-container').offsetHeight)+10 + 'px';
     }
 })
 

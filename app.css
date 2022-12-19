@@ -89,6 +89,7 @@ audio {
     width: 100%;
     max-width: 500px;
     display: block;
+    filter: invert(1);
 }
 
 audio, audio::-webkit-media-controls-panel {
@@ -110,7 +111,7 @@ audio, audio::-webkit-media-controls-panel {
     left:0px;
     width:100%;
     background: rgba(255,255,255,0.95);
-    border-top: 1px dotted red;
+    border-top: 4px dotted #d0d0ff;
     padding:5px;
     text-align: center;
 }
@@ -119,4 +120,4 @@ audio, audio::-webkit-media-controls-panel {
 
 button {cursor: pointer;}
 
-button.add-to-basket {margin-top:10px;}
+button.add-to-basket {margin-top:10px;padding: 5px;filter: saturate(100);}
