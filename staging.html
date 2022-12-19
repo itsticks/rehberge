@@ -11,7 +11,7 @@
     <meta property="og:image:alt" content="rehberge records signature mathematics paper"/>
     <title>Rehberge Records</title>
     <meta name="theme-color" content="#da7962">
-    <link rel="stylesheet" href="/app.css?v=001" />
+    <link rel="stylesheet" href="/app.css?v=002" />
 </head>
 
 <body>
@@ -69,11 +69,14 @@
             
         </p>
         
+        <strong>&#x20AC;15 for cassette postage and download code: </strong><br/>
+        <button class="add-to-basket" data-name="RR02: Rocky Lorelei - A Sculpture In My Hands" data-euros="15">&#128722; add to basket</button>
+
         
-              <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button" target="_blank">
+              <!-- <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button" target="_blank">
                 <strong>&#x20AC;15 for cassette postage and download code: </strong><br/>
                 <input name="business" type="hidden" value="r.loren.taylor@gmail.com"><input name="cmd" type="hidden" value="_xclick"><input name="item_name" type="hidden" value="RR02: Rocky Lorelei - A Sculpture in my Hands"><input name="amount" type="hidden" value="15"><input name="currency_code" type="hidden" value="EUR"><input name="return" type="hidden" value="https://rehberge.com"><input type="image" name="submit" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0"> 
-            </form>
+            </form> -->
         </div>
         
         <figure>
@@ -124,12 +127,9 @@ Rachel has been fascinated with recording onto tape cassettes since she was a sm
     Sea sample recorded in La Spezia, Italy in April 2022. <em>(track 5)</em><br/>
     Available to buy on Cassette <strong>(first edition of 25)</strong><br/>
 </p>
+<strong>&#x20AC;15 for cassette postage and download code: </strong><br/>
+<button class="add-to-basket" data-name="RR01: Sean Armstrong - The Technical Times" data-euros="15">&#128722; add to basket</button>
 
-
-      <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button" target="_blank">
-        <strong>&#x20AC;15 for cassette postage and download code: </strong><br/>
-        <input name="business" type="hidden" value="r.loren.taylor@gmail.com"><input name="cmd" type="hidden" value="_xclick"><input name="item_name" type="hidden" value="RR01: sean armstrong - the technical times"><input name="amount" type="hidden" value="15"><input name="currency_code" type="hidden" value="EUR"><input name="return" type="hidden" value="https://rehberge.com"><input type="image" name="submit" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0"> 
-    </form>
 </div>
 
 <figure>
@@ -160,12 +160,40 @@ bandcamp = <a href='https://rehbergerecords.bandcamp.com' target="_blank">rehber
 
 </footer>
 
+<div id="basket-container" style="display:none;">
+    <p id="basket-label"></p><p id="basket-total"></p>
+    <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button" target="_blank">
+        <input name="business" type="hidden" value="r.loren.taylor@gmail.com"><input name="cmd" type="hidden" value="_xclick"><input name="item_name" type="hidden" value="" id="basket-name"><input name="amount" type="hidden" value="0" id="basket-amount"><input name="currency_code" type="hidden" value="EUR"><input name="return" type="hidden" value="https://rehberge.com"><input type="image" name="submit" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0"> 
+    </form>
+</div>
+
 <script>
 
 const audioFiles = [].slice.call(document.querySelectorAll("li[data-audio]"));
 const audioPlayer = document.getElementById('audio-player');
 const audioPlayerInfo = document.getElementById('audio-player-info');
+const addToBasketButtons = [].slice.call(document.getElementsByClassName('add-to-basket'));
 
+
+addToBasketButtons.forEach(btn=>{
+    btn.onclick = () => {
+        document.getElementById('basket-container').style.display = 'flex';
+        const basketName = document.getElementById('basket-name');
+        const basketAmount = document.getElementById('basket-amount');
+
+        var currentNameValue = basketName.value;
+        var currentAmountValue = parseInt(basketAmount.value);
+
+        var newNameValue = currentNameValue + (currentNameValue!=""?" + ":"") + btn.dataset.name;
+        var newAmountValue = currentAmountValue + parseInt(btn.dataset.euros);
+
+document.getElementById('basket-label').innerHTML = newNameValue;
+document.getElementById('basket-total').innerHTML = "&nbsp; (&#x20AC;" + newAmountValue + ")";
+basketName.value = newNameValue;
+basketAmount.value = newAmountValue; 
+
+    }
+})
 
 const playTrack = (trackLi)=>{
     audioFiles.forEach(y=>{y.className = ''});
