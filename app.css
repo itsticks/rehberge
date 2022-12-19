@@ -118,3 +118,5 @@ audio, audio::-webkit-media-controls-panel {
 #basket-container > * {margin:0px;}
 
 button {cursor: pointer;}
+
+button.add-to-basket {margin-top:10px;}

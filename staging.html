@@ -11,7 +11,7 @@
     <meta property="og:image:alt" content="rehberge records signature mathematics paper"/>
     <title>Rehberge Records</title>
     <meta name="theme-color" content="#da7962">
-    <link rel="stylesheet" href="/app.css?v=002" />
+    <link rel="stylesheet" href="/app.css?v=003" />
 </head>
 
 <body>
@@ -185,7 +185,7 @@ document.getElementById('basket-label').innerHTML = newNameValue;
 document.getElementById('basket-total').innerHTML = "&nbsp; (&#x20AC;" + newAmountValue + ")";
 basketName.value = newNameValue;
 basketAmount.value = newAmountValue; 
-
+document.body.style.paddingBottom = document.getElementById('basket-container').offsetHeight + 'px';
     }
 })
 
