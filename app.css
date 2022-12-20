@@ -76,6 +76,15 @@ li[data-audio] {
     cursor: pointer;
 }
 
+li[data-audio]:before {
+    content: '\25B6  '
+}
+
+li[data-audio]:hover:before,
+li[data-audio].active:before {
+    color:hotpink;
+}
+
 li[data-audio].active {
     font-weight: bold;
 }
@@ -120,3 +129,6 @@ audio, audio::-webkit-media-controls-panel {
 button {cursor: pointer;}
 
 button.add-to-basket {margin-top:10px;padding: 5px;}
+
+/* mailchimp */
+/* .mce_inline_error {display: none !important} */
