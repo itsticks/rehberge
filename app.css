@@ -147,3 +147,7 @@ button.add-to-basket {
 
 /* mailchimp */
 /* .mce_inline_error {display: none !important} */
+
+video{
+    max-width:100%;
+}
