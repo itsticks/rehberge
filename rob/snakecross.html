@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva the Dog Game</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+#gameArea {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-color: green;
+  margin: 0 auto;
+}
+
+#silva, #ball {
+  position: absolute;
+}
+
+#silva {
+  width: 50px;
+  height: 50px;
+  background-image: url('silva.png');
+  background-size: cover;
+}
+
+#ball {
+  width: 30px;
+  height: 30px;
+  background-image: url('ball.png');
+  background-size: cover;
+}
+
+#score {
+  text-align: center;
+  margin-top: 20px;
+}
+</style></head>
+
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div id="score">Score: <span id="scoreValue">0</span></div>
+    <script>
+
+window.load = ()=>{
+      const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const dog = {
+            x: 50,
+            y: 50,
+            size: 30,
+            speed: 5,
+            color: 'black'
+        };
+
+        const ball = {
+            x: 100,
+            y: 100,
+            size: 15,
+            color: 'yellow'
+        };
+
+        let points = 0;
+
+        function drawDog() {
+            ctx.fillStyle = dog.color;
+            ctx.fillRect(dog.x, dog.y, dog.size, dog.size);
+        }
+
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
+            ctx.fillStyle = ball.color;
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function moveDog(e) {
+            if (e.key === 'ArrowUp' || e.key === 'w') dog.y -= dog.speed;
+            if (e.key === 'ArrowDown' || e.key === 's') dog.y += dog.speed;
+            if (e.key === 'ArrowLeft' || e.key === 'a') dog.x -= dog.speed;
+            if (e.key === 'ArrowRight' || e.key === 'd') dog.x += dog.speed;
+
+            if (dog.x < 0) dog.x = 0;
+            if (dog.y < 0) dog.y = 0;
+            if (dog.x + dog.size > canvas.width) dog.x = canvas.width - dog.size;
+            if (dog.y + dog.size > canvas.height) dog.y = canvas.height - dog.size;
+
+            checkBallCollision();
+        }
+
+        function checkBallCollision() {
+            const dx = dog.x + dog.size / 2 - ball.x;
+            const dy = dog.y + dog.size / 2 - ball.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < dog.size / 2 + ball.size) {
+                points++;
+                console.log(`Points: ${points}`);
+                spawnNewBall();
+            }
+        }
+
+        function spawnNewBall() {
+            ball.x = Math.random() * (canvas.width - ball.size);
+            ball.y = Math.random() * (canvas.height - ball.size);
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawDog();
+            drawBall();
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+        document.addEventListener('keydown', moveDog);
+    }
+    </script>
+</body>
+
+</html>

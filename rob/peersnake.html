@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplayer Snake Game</title>
+    <style>
+        #gameCanvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.3.2/peerjs.min.js"></script>
+    <script>
+        // Game Logic
+        // Implement the game logic here, including movement, collision detection, and game state updates.
+        // This is just a basic example to get you started.
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const gridSize = 20;
+        let playerId = null;
+        // Snake object
+        let snake = {
+            x: 0,
+            y: 0,
+            dx: gridSize,
+            dy: 0,
+            cells: [],
+            maxCells: 4
+        };
+
+        // Player-specific game state
+            const players = {};
+
+        // Game loop
+        function gameLoop() {
+            requestAnimationFrame(gameLoop);
+            snake.x += snake.dx;
+            snake.y += snake.dy;
+
+            if (snake.x >= canvas.width) {
+                snake.x = 0;
+            } else if (snake.x < 0) {
+                snake.x = canvas.width - gridSize;
+            }
+
+            if (snake.y >= canvas.height) {
+                snake.y = 0;
+            } else if (snake.y < 0) {
+                snake.y = canvas.height - gridSize;
+            }
+
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw the snake
+            snake.cells.unshift({ x: snake.x, y: snake.y });
+            if (snake.cells.length > snake.maxCells) {
+                snake.cells.pop();
+            }
+
+            ctx.fillStyle = 'green';
+            snake.cells.forEach(function (cell) {
+                ctx.fillRect(cell.x, cell.y, gridSize - 1, gridSize - 1);
+            });
+        }
+
+        // Initialize PeerJS
+        const peer = new Peer();
+
+        // Handle PeerJS events
+        peer.on('open', function (id) {
+            console.log('Peer ID: ' + id);
+            document.body.append(document.createTextNode(id))
+        });
+
+        peer.on('connection', function (connection) {
+            console.log('Incoming connection from: ' + connection.peer);
+
+               // Create a player object for the connected player
+            playerId = connection.peer;
+            players[playerId] = {
+                snake: {
+                    x: 0,
+                    y: 0,
+                    dx: gridSize,
+                    dy: 0,
+                    cells: [],
+                    maxCells: 4
+                },
+                connection: connection
+            };
+
+            // Handle received messages
+            connection.on('data', function (data) {
+                console.log('Received data:', data);
+                // Update game state based on the received data
+            });
+
+            // Send user input to the other player
+            document.addEventListener('keydown', function (event) {
+                const keyCode = event.keyCode;
+                // Send keyCode to the other player
+                connection.send(keyCode);
+            });
+        });
+
+        // Create a new connection to another player
+        function connectToPeer() {
+            const peerId = prompt('Enter peer ID:');
+            const connection = peer.connect(peerId);
+
+            connection.on('open', function () {
+                console.log('Connected to: ' + connection.peer);
+
+                // Handle received messages
+                connection.on('data', function (data) {
+                    console.log('Received data:', data);
+                    // Update game state based on the received data
+                      // Example: If the received data is a keyCode, update the snake's direction
+                    if (typeof data === 'number') {
+                           const player = players[playerId];
+                        const snake = player.snake;
+                        switch (data) {
+                            case 37: // Left arrow key
+                                snake.dx = -gridSize;
+                                snake.dy = 0;
+                                break;
+                            case 38: // Up arrow key
+                                snake.dx = 0;
+                                snake.dy = -gridSize;
+                                break;
+                            case 39: // Right arrow key
+                                snake.dx = gridSize;
+                                snake.dy = 0;
+                                break;
+                            case 40: // Down arrow key
+                                snake.dx = 0;
+                                snake.dy = gridSize;
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
+
+                });
+
+                // Send user input to the other player
+                document.addEventListener('keydown', function (event) {
+                    const keyCode = event.keyCode;
+                    // Send keyCode to the other player
+                    connection.send(keyCode);
+                });
+            });
+        }
+
+        // Capture user input to control the snake's movement.
+        document.addEventListener('keydown', function (event) {
+            const keyCode = event.keyCode;
+            if (keyCode === 37 && snake.dx === 0) {
+                snake.dx = -gridSize;
+                snake.dy = 0;
+            } else if (keyCode === 38 && snake.dy === 0) {
+                snake.dy = -gridSize;
+                snake.dx = 0;
+            } else if (keyCode === 39 && snake.dx === 0) {
+                snake.dx = gridSize;
+                snake.dy = 0;
+            } else if (keyCode === 40 && snake.dy === 0) {
+                snake.dy = gridSize;
+                snake.dx = 0;
+            }
+        });
+
+        // Start the game loop
+        gameLoop();
+
+        // Connect to another player
+    //    connectToPeer();
+    </script>
+
+<button onclick="connectToPeer()">connect</button>
+
+</body>
+</html>
+
+        

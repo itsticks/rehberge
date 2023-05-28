@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Keyboard - D Major Diatonic Scale</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Musical Keyboard - D Major Diatonic Scale</h1>
+    <p>Press the following keys to play the D major diatonic scale from D3 to D5: z, s, e, x, d, r, c, f, t, v, g, y, b,
+        h, u, n, j, i, m, k, o, ,</p>
+    <button id="startButton">Start Audio</button>
+    <script>
+        let audioContext;
+
+        const startAudioContext = () => {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            document.removeEventListener('keydown', startAudioContext);
+            document.addEventListener('keydown', playNoteOnKeyPress);
+        };
+
+        const playNote = (frequency) => {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+
+            oscillator.type = 'sine';
+            oscillator.frequency.value = frequency;
+            gainNode.gain.value = 0.5;
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            oscillator.start();
+            setTimeout(() => {
+                gainNode.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 2);
+                setTimeout(() => oscillator.stop(), 2000);
+            }, 100);
+        };
+
+        const keyToFrequencyMapping = {
+            'z': 146.83, // D3
+            's': 164.81, // E3
+            'e': 174.61, // F#3
+            'x': 196.00, // G3
+            'd': 220.00, // A3
+            'r': 246.94, // B3
+            'c': 293.66, // D4
+            'f': 329.63, // E4
+            't': 349.23, // F#4
+            'v': 392.00, // G4
+            'g': 440.00, // A4
+            'y': 493.88, // B4
+            'b': 587.33, // D5
+            'h': 659.25, // E5
+            'u': 698.46, // F#5
+            'n': 783.99, // G5
+            'j': 880.00, // A5
+            'i': 987.77, // B5
+            'm': 1174.66, // D6
+            'k': 1318.51, // E6
+            'o': 1396.91, // F#6
+            ',': 1567.98, // G6
+        };
+
+        const playNoteOnKeyPress = (event) => {
+            const key = event.key.toLowerCase();
+            if (keyToFrequencyMapping.hasOwnProperty(key)) {
+                playNote(keyToFrequencyMapping[key]);
+            }
+        };
+
+        document.getElementById('startButton').addEventListener('click', startAudioContext);
+        document.addEventListener('keydown', startAudioContext);
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lemmings</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Game variables
+        const gravity = 0.5;
+        let lemming = {
+            x: 100,
+            y: 100,
+            width: 10,
+            height: 10,
+            velocityY: 0,
+            abilities: {
+                walker: true,
+                blocker: false
+            }
+        };
+
+        // Game loop
+        function gameLoop() {
+            update();
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Update game logic
+        function update() {
+            lemming.velocityY += gravity;
+            lemming.y += lemming.velocityY;
+
+            // Collision with ground
+            if (lemming.y + lemming.height > canvas.height) {
+                lemming.y = canvas.height - lemming.height;
+                lemming.velocityY = 0;
+            }
+        }
+
+        // Draw everything
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw lemming
+            ctx.fillStyle = 'green';
+            ctx.fillRect(lemming.x, lemming.y, lemming.width, lemming.height);
+        }
+
+        // Start the game loop
+        gameLoop();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Waving Sword Figure</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      
+      const swordColor = "#c7b77e";
+      const bodyColor = "#9dc3e6";
+      const armColor = "#c5a36c";
+      
+      const bodyWidth = 50;
+      const bodyHeight = 100;
+      const armWidth = 20;
+      const armHeight = 70;
+      const swordWidth = 60;
+      const swordHeight = 10;
+      const butterflyColors = ["hotpink","yellow","orange","blue","purple"];
+      const butterflySpeeds = [1, 2, 3, 4, 5];
+      const butterflies = [
+        {x: 100, y: 100, color: "hotpink", speed: 1},
+        {x: 200, y: 200, color: "yellow", speed: 2},
+        {x: 300, y: 300, color: "orange", speed: 3},
+        {x: 400, y: 400, color: "blue", speed: 4},
+        {x: 500, y: 500, color: "purple", speed: 5},]
+
+      let armAngle = 0;
+      let posX = canvas.width/2;
+      let posY = canvas.height/2;
+      
+      function draw() {
+        // Clear the canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw the background butterflies
+        for(let i = 0; i < butterflies.length; i++) {
+          let butterfly = butterflies[i];
+          butterfly.x += butterfly.speed;
+          butterfly.y += Math.sin(butterfly.x/20) * 2;
+          
+          if(butterfly.x > canvas.width + 20) {
+            butterfly.x = -20;
+            butterfly.y = Math.random() * canvas.height;
+            butterfly.color = butterflyColors[Math.floor(Math.random() * butterflyColors.length)];
+            butterfly.speed = butterflySpeeds[Math.floor(Math.random() * butterflySpeeds.length)];
+          }
+          
+          ctx.beginPath();
+          ctx.fillStyle = butterfly.color;
+          ctx.moveTo(butterfly.x, butterfly.y);
+          ctx.bezierCurveTo(
+            butterfly.x + 20, butterfly.y - 15,
+            butterfly.x + 25, butterfly.y + 10,
+            butterfly.x, butterfly.y + 20
+          );
+          ctx.bezierCurveTo(
+            butterfly.x - 25, butterfly.y + 10,
+            butterfly.x - 20, butterfly.y - 15,
+            butterfly.x, butterfly.y
+          );
+          ctx.fill();
+        }
+        
+        // Draw the body
+        ctx.fillStyle = bodyColor;
+        ctx.fillRect(posX - bodyWidth/2, posY - bodyHeight/2, bodyWidth, bodyHeight);
+        
+        // Draw the arm
+        ctx.save();
+        ctx.translate(posX, posY);
+        ctx.rotate(armAngle);
+        ctx.fillStyle = armColor;
+        ctx.fillRect(-armWidth/2, -armHeight/2, armWidth, armHeight);
+        
+        // Draw the sword
+        ctx.fillStyle = swordColor;
+        ctx.fillRect(0, -swordHeight/2, swordWidth, swordHeight);
+        
+        ctx.restore();
+        
+        // Update the arm angle for the next frame
+        armAngle += 0.05;
+        
+        // Request the next frame
+        requestAnimationFrame(draw);
+      }
+      
+      function handleKeyDown(event) {
+        switch(event.key) {
+          case "ArrowLeft":
+            posX -= 10;
+            break;
+          case "ArrowRight":
+            posX += 10;
+            break;
+          case "ArrowUp":
+            posY -= 10;
+            break;
+          case "ArrowDown":
+            posY += 10;
+            break;
+          default:
+            return;
+        }
+
+     
+        
+        // Make sure the figure stays within the canvas bounds
+        posX = Math.max(bodyWidth/2, Math.min(canvas.width - bodyWidth/2, posX));
+        posY = Math.max(bodyHeight/2, Math.min(canvas.height - bodyHeight/2, posY));
+      }
+      
+      // Attach the keydown event listener to the document
+      document.addEventListener("keydown", handleKeyDown);
+      
+      // Start the animation loop
+      draw();
+    </script>
+  </body>
+</html>

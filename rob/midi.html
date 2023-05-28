@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random MIDI Sequence</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tonejs/midi"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/midi.js/0.3.0/midi.min.js"></script>
+</head>
+<body>
+	<button onclick="startAudio()">Start</button>
+	<button onclick="generateAndPlayMIDI()">Generate and Play MIDI</button>
+	<script>
+		let context;
+		function startAudio() {
+			context = new AudioContext();
+			context.resume();
+		}
+		function generateAndPlayMIDI() {
+			const midi = new Midi();
+			const track = midi.addTrack();
+
+			// Set up random MIDI notes
+			const notes = ["C4", "D4", "E4", "F4", "G4", "A4", "B4"];
+			for (let i = 0; i < 16; i++) {
+				const noteIndex = Math.floor(Math.random() * notes.length);
+				const velocity = Math.floor(Math.random() * 100) + 25;
+				track.addNote({
+					midi: Tone.Frequency(notes[noteIndex]).toMidi(),
+					time: i,
+					duration: "8n",
+					velocity: velocity
+				});
+			}
+
+			// Generate MIDI file and play it
+			const byteArray = new Uint8Array(midi.toArray());
+			MIDI.loadPlugin({
+				soundfontUrl: "https://gleitz.github.io/midi-js-soundfonts/FluidR3_GM/",
+				instrument: "acoustic_grand_piano",
+				onload: function() {
+					MIDI.Player.stop();
+					MIDI.Player.loadFile(byteArray, function() {
+						MIDI.Player.start();
+					});
+				}
+			});
+		}
+	</script>
+</body>
+</html>
