@@ -1,0 +1,370 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <meta name="description" content="record label in berlin wedding curated by rocky lorelei and sean armstrong">  
+    <meta property="og:title" content="Rehberge Records" />
+    <meta property="og:description" content="record label in berlin wedding curated by rocky lorelei and sean armstrong" />
+    <meta property="og:site_name" content="Rehberge Records" />
+    <meta property="og:url" content="https://rehbergerecords.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" itemprop="image" content="https://rehbergerecords.com/images/math-share-image-square.jpg" />
+    <meta property="og:image:alt" content="rehberge records signature mathematics paper"/>
+    <title>Rehberge Records</title>
+    <meta name="theme-color" content="#da7962">
+    <link rel="stylesheet" href="/app.css?v=009" />
+</head>
+
+<body>
+<div class="maths-paper-background-vertical bg"></div>
+<!-- <div class="maths-paper-background-horizontal top-border bg"></div> -->
+<header class="maths-paper-background-repeat">
+    <div id="logo-container" class="maths-paper-logo-background bg"></div>
+    <img src="/images/rehberge-logo-plain.png" alt="reberge records logo" title="rehberge records" />
+<p>rehberge records 
+    <strong>diy cassette label in berlin wedding</strong><br/>
+    curated by rocky lorelei and sean armstrong<br/>
+</p>
+<audio controls id="audio-player">
+    <source src="/records/rr02/01 Glimmer in the Dark.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+  <p>&#9835; <span id="audio-player-info"></span></p>
+</header>
+
+<main>
+
+        <section id="rr03">
+            <div>
+                <h2><span>RR03:</span> Ela Spalding - Forces</h2>
+                <em>released 24th June 2023</em>
+                <ol>
+                    <li data-audio-title="Ela Spalding - Black Lion"
+                        data-audio="/records/rr03/01 Black Lion.mp3">Black Lion</li>
+                    <li data-audio-title="Ela Spalding - Earth Pillow"
+                        data-audio="/records/rr03/02 Earth Pillow.mp3">Earth Pillow</li>
+                    <li data-audio-title="Ela Spalding - Bajo Grande"
+                        data-audio="/records/rr03/03 Bajo Grande.mp3">Bajo Grande</li>
+                    <li data-audio-title="Ela Spalding - It's a Forest"
+                        data-audio="/records/rr03/04 It's a Forest.mp3">It's a Forest</li>
+                    <li data-audio-title="Ela Spalding - Pearl River"
+                        data-audio="/records/rr03/05 Pearl River.mp3">Pearl River</li>
+                    <li data-audio-title="Ela Spalding - Rage" data-audio="/records/rr03/06 Rage.mp3">
+                        Rage</li>
+                    <li data-audio-title="Ela Spalding - Pirates and Gold" data-audio="/records/rr03/07 Pirates and Gold.mp3">Pirates and Gold</li>
+                    <li data-audio-title="Ela Spalding - Kaleidoscope Year"
+                        data-audio="/records/rr03/08 Kaleidoscope Year.mp3">Kaleidoscope Year</li>
+                    <li data-audio-title="Ela Spalding - Goldmines" data-audio="/records/rr03/09 Goldmines.mp3">Goldmines</li>
+                    <li data-audio-title="Ela Spalding - Goldmines (Full Band)" data-audio="/records/rr03/10 Goldmines (Full Band).mp3">Goldmines (Full Band)</li>
+                </ol>
+        
+                <p>
+            Forces is a compilation of nine songs written and collected between 2012 and 2022. The album addresses the forces that
+            rule our lives; our connection to nature and also the obstacles that seem to get in the way of us having more harmonious
+            relationships with each other and our environment. The songs speak to decisive moments: when a calling received a
+            response, when a wave was caught, when an image was captured. Forces was recorded at home in Berlin, with field
+            recordings gathered in Panama and Europe.<br /><br />
+        
+                    Conceived as an artwork, Forces comes with analog photographs that were taken in the same 10-year period. The artist has
+                    produced a handbound, signed, limited edition book of 100 copies with the images and lyrics that you can purchase
+                    directly from her by writing to <a href="mailto:connect@elaspalding.com">connect@elaspalding.com</a><br /><br />
+        
+                    Co–produced with Estudio Nuboso (<a href="www.estudionuboso.org" target="_blank">www.estudionuboso.org</a>) part of the proceeds go towards the care of a very special piece
+                    of cloud forest in Panama - El Jilguero Reserve.<br /><br />
+        
+            Music and lyrics by Ela Spalding<br />
+            On Goldmines: cello, arrangement and mix by Barnaby Tree. And the band version with Manuel Ferrer, Benito Berm&uacute;dez and
+            David Capar&oacute;, recorded live by Diego Pitt&iacute;.<br />
+            Digital mix by Michael Hughes<br />
+            Mix and master for tape by Rachel Taylor
+        
+                </p>
+        
+                <!-- <strong>&#x20AC;15 for cassette postage and download code: </strong><br />
+                <button class="add-to-basket" data-name="RR02: Rocky Lorelei - A Sculpture In My Hands"
+                    data-euros="15">&#128722; add to basket</button> -->
+        
+            </div>
+        
+            <figure>
+                <caption>
+                    <p><em>cover art by Ela Spalding</em></p>
+                </caption>
+                <img src="records/rr03/forces cover art.jpg" alt="Ela Spalding - Forces album cover art" />
+            </figure>
+        
+        
+            <div>
+                <figure>
+                    <caption>
+                        <p><em>photograph by Rachel Taylor</em></p>
+                    </caption>
+                    <img src="records/rr03/Ela Forces Rehberge Site Photo.JPG"
+                        alt="Ela Spalding - black and white analogue photograph" />
+                </figure>
+                <p><strong>Ela Spalding</strong> is a mother of two, daughter, sister, partner and friend; a multimedia artist~facilitator bringing people
+                closer to themselves, others, nature and the places we inhabit through sound, books, words, somatics, installations and
+                cross-disciplinary collaborations. She finds in music a free space to express the multiplicity of experiences and
+                emotions she gathers and encounters in daily life, while working and walking in the fields of art, ecology and being
+                human. She is the founder of Estudio Nuboso and has an artistic practice that she shares between Berlin, Panama and
+                beyond.
+                </p>
+
+                <strong>&#x20AC;15 for cassette postage and download code: </strong><br/>
+                <button class="add-to-basket" data-name="RR03: Ela Spalding - Forces" data-euros="15">&#128722; add to basket</button>
+            </div>
+        
+        </section>
+
+
+    <section id="anyway-video">
+        <div>
+                <h2>A Music Video for Sean Armstrong's 'Anyway'</h2>
+               <p>by <strong>Christine Gensheimer</strong> (<a href="https://www.instagram.com/christinegensheimer/" target="_blank">instagram</a>) - <em>released April 2023</em></p>
+            <video controls>
+                <source src="/videos/anyway.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p>Taken from the album <a href="#rr01">The Technical Times</a>. Watch on <a href="https://www.youtube.com/watch?v=scGE6Xqcpxk&feature=youtu.be" target="_blank">youtube</a>, or <a href="/videos/anyway.mp4" download>Download</a>.</p>
+</div>
+        
+        </section>
+
+    <section id="rr02">
+        <div>
+                <h2><span>RR02:</span> rocky lorelei - A Sculpture In My Hands</h2>
+                <em>released 21st December 2022</em>
+                <ol>
+                    <li data-audio-title="rocky lorelei - Glimmer in the Dark" data-audio="/records/rr02/01 Glimmer in the Dark.mp3">Glimmer in the Dark</li>
+                    <li data-audio-title="rocky lorelei - Tomorrow is a Star" data-audio="/records/rr02/02 Tomorrow is a Star.mp3">Tomorrow is a Star</li>
+                    <li data-audio-title="rocky lorelei - Close to the Source" data-audio="/records/rr02/03 Close to the Source.mp3">Close to the Source</li>
+                    <li data-audio-title="rocky lorelei - Full Moon Light Falls" data-audio="/records/rr02/04 Full Moon Light Falls.mp3">Full Moon Light Falls</li>
+                    <li data-audio-title="rocky lorelei - Shining, Incandescent" data-audio="/records/rr02/05 Shining, Incandescent.mp3">Shining, Incandescent</li>
+                    <li data-audio-title="rocky lorelei - Telepathic Mail" data-audio="/records/rr02/06 Telepathic Mail.mp3">Telepathic Mail</li>
+                    <li data-audio-title="rocky lorelei - Oh Alvina" data-audio="/records/rr02/07 Oh Alvina.mp3">Oh Alvina</li>
+                    <li data-audio-title="rocky lorelei - It's All On My Mind" data-audio="/records/rr02/08 It's All On My Mind.mp3">It's All On My Mind</li>
+                    <li data-audio-title="rocky lorelei - Fight For It" data-audio="/records/rr02/09 Fight For It.mp3">Fight For It</li>
+                    <li data-audio-title="rocky lorelei - Heart of Water" data-audio="/records/rr02/10 Heart of Water.mp3">Heart of Water</li>
+                    <li data-audio-title="rocky lorelei - Pathway" data-audio="/records/rr02/11 Pathway.mp3">Pathway</li>
+                    </ol>
+ 
+        <p>
+            A Sculpture In My Hands was conceived between summer 2021 and spring 2022, slowly and darkly ~ ~ ~<br/>
+            a collection of dreams, reflections, and premonitions, a testament to patience<br/>
+            the drone pieces (Full Moon Light Falls, Telepathic Mail, Heart of Water) were all recorded improvisations from the spring of 2022, just before the other songs were recorded, on a Yamaha mt8x<br/><br/>
+                        
+            thanks to Sean Armstrong for playing bass on It's All On My Mind <em>(track 8)</em>, and for playing piano on Pathway, <em>(track 11)</em>.<br/>
+            
+            the bird voice on Tomorrow is a Star is thanks to the nightingale, singing one spring night by Pl&ouml;tzensee
+            rain on Oh Alvina <em>(track 7)</em> was recorded outside the window of my room<br/>
+            
+            the album art is 'Decisions in the white plate' a painting by <a href="https://www.instagram.com/agneseguido/" target="_blank">Agnese Guido</a><br/>
+            
+            thanks to jack mellin for lending me his guitar and bass since i left glasgow, both of which you hear on the recordings<br/>
+
+            thank you to my family for loving me and supporting me, & to my friends for choosing me<br/>
+            
+            i dedicate A Sculpture In My Hands to the memory of my friend, Benjamin Tenisci Stevenson
+            
+        </p>
+        
+        <strong>&#x20AC;15 for cassette postage and download code: </strong><br/>
+        <button class="add-to-basket" data-name="RR02: Rocky Lorelei - A Sculpture In My Hands" data-euros="15">&#128722; add to basket</button>
+
+        </div>
+        
+        <figure>
+            <caption><p><em>cover art 'Decisions in the white plate' by Agnese Guido (<a href="https://www.instagram.com/agneseguido/" target="_blank">instagram</a>)</em></p></caption>
+            <img src="records/rr02/rocky-lorelei--a-sculpture-in-my-hands--cover.jpg" alt="Sean Armstrong - The Technical Times album cover art" />
+        </figure>
+        
+        
+        <div>
+            <figure>
+                <caption><p><em>photograph by Sean Armstrong</em></p></caption>
+            <img src="records/rr02/rocky-lorelei-press-photo-reflections.jpeg" alt="Rocky Lorelei - black and white analogue photograph with reflections in what looks like a train carriage window" />
+        </figure>
+        <p><strong>rocky lorelei</strong> represents the solo musical work of Rachel Lauren Taylor, who was born and raised beside Lake Ontario in Toronto, and is currently set up in Berlin.<br/>
+She uses guitar as her primary instrument for songwriting and arranging, and an analog synthesizer for ad hoc drone pieces.<br/>
+Her musical processes run parallel to her psychic processes; writing and recording songs is her most vital means of cultivating an understanding of her inner and outer life experiences, bringing a symmetry to her music and her sense of self.<br/>
+Her approach to her music is largely intuitive; usually led by a melody, a string of words, and a feeling, she holds the idea in reflection, works on it, and waits, until the song's identity is realized in fullness.<br/>
+Rachel has been fascinated with recording onto tape cassettes since she was a small child, and it remains her preferred medium for recording music.
+        </p>
+        </div>
+        
+        </section>
+<hr/>
+    <section id="rr01">
+<div>
+        <h2><span>RR01:</span> Sean Armstrong - The Technical Times</h2>
+        <em>released 25th November 2022</em>
+
+        <ol>
+            <li data-audio-title="Sean Armstrong - Perspektivaluna" data-audio="/records/rr01/01 Perspektivaluna.mp3">Perspektivaluna</li>
+            <li data-audio-title="Sean Armstrong - Seven" data-audio="/records/rr01/02 Seven.mp3">Seven</li>
+            <li data-audio-title="Sean Armstrong - Playing It Cool" data-audio="/records/rr01/03 Playing It Cool.mp3">Playing It Cool</li>
+            <li data-audio-title="Sean Armstrong - Red Cathedral" data-audio="/records/rr01/04 Red Cathedral.mp3">Red Cathedral</li>
+            <li data-audio-title="Sean Armstrong - Island Song" data-audio="/records/rr01/05 Island Song.mp3">Island Song</li>
+            <li data-audio-title="Sean Armstrong - Rambling Echo, Spring Softly" data-audio="/records/rr01/06 Rambling Echo, Spring Softly.mp3">Rambling Echo, Spring Softly</li>
+            <li data-audio-title="Sean Armstrong - Lots of Love" data-audio="/records/rr01/07 Lots of Love.mp3">Lots of Love</li>
+            <li data-audio-title="Sean Armstrong - A Clearing" data-audio="/records/rr01/08 A Clearing.mp3">A Clearing</li>
+            <li data-audio-title="Sean Armstrong - Impossible Ink" data-audio="/records/rr01/09 Impossible Ink.mp3">Impossible Ink</li>
+            <li data-audio-title="Sean Armstrong - Realise The Beautiful Clear Prism That You Are" data-audio="/records/rr01/10 Realise The Beautiful Clear Prism That You Are.mp3">Realise The Beautiful Clear Prism That You Are</li>
+            <li data-audio-title="Sean Armstrong - Anyway" data-audio="/records/rr01/11 Anyway.mp3">Anyway</li>
+            </ol>
+ 
+<p>
+    A new solo album by Sean Armstrong.<br/>
+    Recorded at home in Wedding, Berlin as people, sounds and seasons passed by outside. <br/>
+    Vocal appearance by Rocky Lorelei <em>(track 2)</em><br/>
+    Drum overdubs by Rocky Lorelei, recorded at Herzbergstrasse 100 <em>(track 4,6,7,9,10,11)</em> <br/>
+    Sound clips of Daria Halprin acting in 'Zabriskie Point' <em>(track 4, 8)</em><br/>
+    Frogs sample recorded at Pl&ouml;tzensee, Berlin one summer night in 2022. <em>(track 2)</em><br/>
+    Sea sample recorded in La Spezia, Italy in April 2022. <em>(track 5)</em><br/>
+    Available to buy on Cassette <strong>(first edition of 25)</strong><br/>
+</p>
+<strong>&#x20AC;15 for cassette postage and download code: </strong><br/>
+<button class="add-to-basket" data-name="RR01: Sean Armstrong - The Technical Times" data-euros="15">&#128722; add to basket</button>
+
+</div>
+
+<figure>
+    <caption><p><em>cover art by Sean Armstrong</em></p></caption>
+    <img src="records/rr01/The Technical Times - Cover (cover).jpg" alt="Sean Armstrong - The Technical Times album cover art" />
+</figure>
+
+
+<div>
+    <figure>
+        <caption><p><em>photograph by Rocky Lorelei</em></p></caption>
+    <img src="records/rr01/sean-armstrong-lake-picture.jpg" alt="Sean Armstrong - Photographed by the lake by rocky lorelei" />
+</figure>
+<p><strong>Sean Armstrong</strong> - a songwriter and home recordist from Scotland living in Berlin. He was raised in remote corners of the Scottish Highlands and Islands, where he would walk beside the iron-grey sea. As a young grown up, he moved to Glasgow to study human beings. It was there that music found him, saved him, and simultaneously destroyed his life. Sean's music is handmade, all over the place, and to the point. He enjoys singing about love, harmony and nature, and attempts to channel the special sense of timelessness that he finds in his favourite music, which is mostly of the past.
+</p>
+</div>
+
+</section>
+
+</main>
+
+<footer class="maths-paper-background">
+
+    <!-- Begin Mailchimp Signup Form -->
+<!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css"> -->
+<style type="text/css">
+	/* #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;} */
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+    <form action="https://hotmail.us10.list-manage.com/subscribe/post?u=938b6ca531ed52a6fd8a68957&amp;id=3fb5b7c130&amp;f_id=00dcc1e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+	<label for="mce-EMAIL"><strong>rehberge records news list signup</strong></label><br/>
+	<input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email Address" required>
+</div>
+	<!-- <div id="mce-responses" class="clear foot">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_938b6ca531ed52a6fd8a68957_3fb5b7c130" tabindex="-1" value=""></div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<!-- <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script> -->
+<!--End mc_embed_signup-->
+
+<p>
+you can contact us at <a href='mailto://rehbergerecords@hotmail.com' target="_blank">rehbergerecords@hotmail.com</a><br/>
+instagram = <a href='https://www.instagram.com/rehberge_records/' target="_blank">@rehberge_records</a><br/>
+bandcamp = <a href='https://rehbergerecords.bandcamp.com' target="_blank">rehbergerecords</a>
+</p>
+
+
+
+</footer>
+
+<div id="basket-container" style="display:none;">
+    <p id="basket-label"></p><p id="basket-total"></p>
+    <form method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button" target="_blank">
+        <input name="business" type="hidden" value="sean.armstrong@live.co.uk"><input name="cmd" type="hidden" value="_xclick"><input name="item_name" type="hidden" value="" id="basket-name"><input name="amount" type="hidden" value="0" id="basket-amount"><input name="currency_code" type="hidden" value="EUR"><input name="return" type="hidden" value="https://rehberge.com"><input type="image" name="submit" src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png" alt="Buy Now"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0"> 
+    </form>
+</div>
+
+<script>
+
+const audioFiles = [].slice.call(document.querySelectorAll("li[data-audio]"));
+const audioPlayer = document.getElementById('audio-player');
+const audioPlayerInfo = document.getElementById('audio-player-info');
+const addToBasketButtons = [].slice.call(document.getElementsByClassName('add-to-basket'));
+
+
+addToBasketButtons.forEach(btn=>{
+    btn.onclick = () => {
+        document.getElementById('basket-container').style.display = 'flex';
+        const basketName = document.getElementById('basket-name');
+        const basketAmount = document.getElementById('basket-amount');
+
+        var currentNameValue = basketName.value;
+        var currentAmountValue = parseInt(basketAmount.value);
+
+        var newNameValue = currentNameValue + (currentNameValue!=""?" + ":"") + btn.dataset.name;
+        var newAmountValue = currentAmountValue + parseInt(btn.dataset.euros);
+
+document.getElementById('basket-label').innerHTML = newNameValue;
+document.getElementById('basket-total').innerHTML = "&nbsp; (&#x20AC;" + newAmountValue + ")";
+basketName.value = newNameValue;
+basketAmount.value = newAmountValue; 
+document.body.style.paddingBottom = parseInt(document.getElementById('basket-container').offsetHeight)+20 + 'px';
+    }
+})
+
+const playTrack = (trackLi)=>{
+    audioFiles.forEach(y=>{y.className = ''});
+    trackLi.className = 'active';
+    audioPlayer.src = trackLi.dataset.audio;
+    audioPlayerInfo.innerText = `${trackLi.dataset.audioTitle}`;
+    audioPlayer.play();
+}
+
+audioFiles.forEach(x=>{
+    x.onclick = () => {
+        playTrack(x);
+    }
+})
+
+audioPlayer.onended = ()=>{
+    let currentTrackIndex = audioFiles.reduce((accum,x,i)=>{
+        if(x.className=='active'){
+            accum = i;
+        }
+        return accum;
+    }, 0);
+
+    if(currentTrackIndex < audioFiles.length-1){
+        let nextTrackIndex = currentTrackIndex+1;
+        let nextTrack = audioFiles[nextTrackIndex];
+        playTrack(audioFiles[nextTrackIndex]);
+    }
+}
+
+window.onscroll = ()=>{
+[].slice.call(document.getElementsByClassName('bg'))
+.forEach(bg=>{
+    bg.style.filter = `hue-rotate(${(window.scrollY)*0.1}deg)`;
+    if(bg.id=='logo-container'){
+    bg.style.opacity = 1.25 - window.scrollY / window.scrollMaxY;
+    bg.style.transform = `skew(-${window.scrollY*0.01}deg,-${window.scrollY*0.01}deg)`
+    }
+})
+}
+
+window.onload = () => playTrack(audioFiles[0]);
+
+</script>
+</body>
+</html>
